@@ -46,6 +46,78 @@ header .inner-container {
     padding: unset;
 }
 
+button {
+    height: 3.75rem;
+}
+
+.section-title {
+    padding: 5rem 1rem;
+}
+
+.section-title h2 {
+    border-bottom: 2px solid var(--seafoam-green);
+    width: max-content;
+}
+
+.section-title p {
+    padding-top: 1rem;
+}
+
+/* Typography */
+
+body {
+    font-family: var(--body);
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+ 
+h1 {
+    font-family: var(--headings);
+    font-size: 3rem;
+    line-height: 3.625rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: var(--headings);
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--md-blue);
+}
+
+h3 {
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+
+.card-title {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+button {
+    font-size: 1.313rem;
+    text-transform: uppercase;
+}
+
+button a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+footer h2 {
+    font-size: 1.75rem;
+}
+
+.copyright p {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--dk-blue);
+}
 
 /* Header & Navigation */
 
@@ -64,7 +136,6 @@ header {
 .main-menu > li {
     margin: 2rem 0;
 }
-
 
 .menu-icon {
     cursor: pointer;
@@ -105,4 +176,97 @@ nav li {
 nav li a {
     display: block;
     padding: 0 0.25rem;
+}
+
+
+/* Hero Section */
+
+.hero {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: linear-gradient(238deg, #43c5ab 0%, #2e6d7f 50%, #191553 100%);
+    color: var(--lt-seafoam-green)
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.buttons button {
+    background-color: transparent;
+    border: 3px solid var(--seafoam-green);
+    border-radius: 5px;
+}
+
+.buttons button:first-child {
+    background-color: var(--seafoam-green);
+}
+
+.buttons button:first-child:hover {
+    background-color: var(--lt-seafoam-green);
+    border-color: var(--lt-seafoam-green);
+}
+
+.buttons button:nth-child(2) a {
+    color: var(--seafoam-green);
+}
+
+.buttons button:nth-child(2):hover {
+    background-color: var(--seafoam-green);
+}
+
+.buttons button:nth-child(2) a:hover {
+    color: var(--lt-seafoam-green);
+}
+
+/* Our Work Section */
+
+.scroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 5rem;
+    overflow-x: scroll;
+}
+
+.card-column {
+    flex: 0 0 298px;
+}
+
+.card img {
+    width: 298px;
+    height: 243px;
+}
+
+.card-body {
+    background-color: var(--md-blue);
+    height: 3.625rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.card-title {
+    color: var(--lt-seafoam-green);
+}
+
+.card-body.green {
+    background-color: var(--seafoam-green);
+}
+
+.card-body.green p {
+    color: var(--dk-blue);
+}
+
+
+/* Large Screen */
+@media screen and (min-width: 47.5rem) {
+
+    .buttons {
+        flex-direction: row;
+    }
 }
