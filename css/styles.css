@@ -12,6 +12,15 @@
     --body: 'Rubik', sans-serif;
 }
 
+/* Utility Classes */
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
 .sr-only {
     position: absolute;
     top: 0;
@@ -19,4 +28,81 @@
     width: 0.1rem;
     height: 0.1rem;
     visibility: hidden;
+}
+
+.hidden{
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+.inner-container {
+    margin: auto;
+    max-width: 60rem;
+    padding: 3rem 1rem;
+}
+
+header .inner-container {
+    padding: unset;
+}
+
+
+/* Header & Navigation */
+
+header {
+    background-color: var(--lt-seafoam-green);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.inner-container.wide-flex .logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.main-menu > li {
+    margin: 2rem 0;
+}
+
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--dk-blue);
+}
+
+.main-menu svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--dk-blue)
+}
+
+nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-color: var(--bg-black);
+    padding: 0 1rem;
+}
+
+.show-nav {
+    max-height: unset;
+    overflow: visible;
+}
+
+nav li {
+    margin: 0.75rem 0;
+    text-align: right;
+}
+
+nav li a {
+    display: block;
+    padding: 0 0.25rem;
 }
